@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    <title>OSA | Term</title>
+{% endblock page_title %}
+
+{% block sidebar %}
+{% if latest_terms %}
+<ul>
+  {% for term in latest_terms %}
+      <li><a href="{% url 'terms:detail' term.id %}">{{ term }}</a></li>
+  {% endfor %}    
+</ul>
+{% else %}
+  <p>No terms are available.</p>
+{% endif %}
+{% endblock sidebar %}
+
+{% block content %}
+<p>This is the terms home.</p>
+{% endblock content %}

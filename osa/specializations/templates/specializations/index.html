@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    <title>OSA | Specializations</title>
+{% endblock page_title %}
+
+{% block sidebar %}
+{% if latest_specializations %}
+<ul>
+  {% for specialization in latest_specializations %}
+      <li><a href="{% url 'specializations:detail' specialization.id %}">{{ specialization.name }}</a></li>
+  {% endfor %}    
+</ul>
+{% else %}
+  <p>No specializations are available.</p>
+{% endif %}
+{% endblock sidebar %}
+
+{% block content %}
+<p>This is the specializations home.</p>
+{% endblock content %}

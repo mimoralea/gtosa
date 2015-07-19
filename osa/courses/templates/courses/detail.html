@@ -1,0 +1,10 @@
+{% extends courses/index.html' %}
+
+{% block page_title %}
+    <title>OSA | Courses | {{ course.name }}</title>
+{% endblock page_title %}
+
+{% block content %}
+<h1>{{ course.name }}</h1>
+<p>{{ course.hours }}</p>
+{% endblock content %}

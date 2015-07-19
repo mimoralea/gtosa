@@ -1,0 +1,9 @@
+{% extends 'students/index.html' %}
+
+{% block page_title %}
+    <title>OSA | Students | {{ student.display_name }}</title>
+{% endblock page_title %}
+
+{% block content %}
+<h1>{{ student.display_name }}</h1>
+{% endblock content %}

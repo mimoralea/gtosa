@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    <title>OSA | Courses</title>
+{% endblock page_title %}
+
+{% block sidebar %}
+{% if latest_courses %}
+<ul>
+  {% for course in latest_courses %}
+      <li><a href="{% url 'courses:detail' course.id %}">{{ course.name }}</a></li>
+  {% endfor %}    
+</ul>
+{% else %}
+  <p>No courses are available.</p>
+{% endif %}
+{% endblock sidebar %}
+
+{% block content %}
+<p>This is the courses home.</p>
+{% endblock content %}

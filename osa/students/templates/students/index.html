@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    <title>OSA | Students</title>
+{% endblock page_title %}
+
+{% block sidebar %}
+{% if latest_students %}
+<ul>
+  {% for student in latest_students %}
+      <li><a href="{% url 'students:detail' student.id %}">{{ student.display_name }}</a></li>
+  {% endfor %}    
+</ul>
+{% else %}
+  <p>No students are available.</p>
+{% endif %}
+{% endblock sidebar %}
+
+{% block content %}
+<p>This is the students home.</p>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'terms/index.html' %}
+
+{% block page_title %}
+    <title>OSA | Term | {{ term }}</title>
+{% endblock page_title %}
+
+{% block content %}
+<h1>{{ term }}</h1>
+<p>{{ term.code }}</p>
+<p>{{ term.year }}</p>
+{% endblock content %}
